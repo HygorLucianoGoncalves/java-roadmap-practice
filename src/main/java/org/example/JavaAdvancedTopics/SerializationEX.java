@@ -6,56 +6,58 @@ public class SerializationEX {
 
 }
 
-// Classe que implementa Serializable
-class Pessoaaa implements Serializable {
-    private String nome;
-    private int idade;
+//Class who implements Serializable
+class person implements Serializable {
+    private String name;
+    private int year;
 
-    public Pessoaaa(String nome, int idade) {
-        this.nome = nome;
-        this.idade = idade;
+    public person(String name, int year) {
+        this.name = name;
+        this.year = year;
     }
 
     @Override
     public String toString() {
-        return "Nome: " + nome + ", Idade: " + idade;
+        return "Nome: " + name + ", Idade: " + year;
     }
 }
 
+
+
 class ExemploSerialization {
     public static void main(String[] args) {
-        // Serialização
+        // serialization
         try {
-            // Criar um objeto da classe Pessoa
-            Pessoaaa pessoaaa = new Pessoaaa("Alice", 30);
+           // CREATE AN OBJECT FROM THE CLASS PERSON
+            person person = new person("Alice", 30);
 
-            // Criar um objeto ObjectOutputStream para escrever no arquivo
-            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("pessoa.ser"));
+            // create an object from type ObjectOutputStream to write to file
+            ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream("person.ser"));
 
-            // Escrever o objeto serializado no arquivo
-            out.writeObject(pessoaaa);
+            // Write the object serialized to the file
+            out.writeObject(person);
 
-            // Fechar o fluxo de saída
+            // close the flow to exit
             out.close();
 
-            System.out.println("Objeto serializado e salvo no arquivo.");
+            System.out.println("Object serialized to save to file.");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        // Desserialização
+        // deserialization
         try {
-            // Criar um objeto ObjectInputStream para ler o arquivo
+            // Create an object ObjectInputStream to read the file
             ObjectInputStream in = new ObjectInputStream(new FileInputStream("pessoa.ser"));
 
-            // Ler o objeto serializado do arquivo
-            Pessoaaa pessoaaaLida = (Pessoaaa) in.readObject();
+            // Read the object serialization file
+            person personLida = (person) in.readObject();
 
-            // Fechar o fluxo de entrada
+            // Close the flow of entry
             in.close();
 
-            System.out.println("Objeto desserializado:");
-            System.out.println(pessoaaaLida);
+            System.out.println("Object deserialization:");
+            System.out.println(personLida);
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }
