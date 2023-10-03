@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals.OOP.encapsulamento;
+package org.example.JavaAdvancedTopics.OOP.encapsulamento;
 
 
 //`protected:` visível dentro da classe e também para as filhas/filhos.

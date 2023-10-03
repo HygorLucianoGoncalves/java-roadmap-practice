@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals.OOP.herança;
+package org.example.JavaAdvancedTopics.OOP.herança;
 
 class teste{
     public static void main(String[] args) {

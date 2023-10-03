@@ -1,6 +1,4 @@
-package org.example.JavaFundamentals.OOP.abstração.interfaces;
-
-import java.lang.reflect.AccessibleObject;
+package org.example.JavaAdvancedTopics.OOP.abstração.interfaces;
 
 public class Teste implements Interface2, Interface3 {
     public static void main(String[] args) {

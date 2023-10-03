@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals.OOP.polimorfismo;
+package org.example.JavaAdvancedTopics.OOP.polimorfismo;
 
 public class PolimorfismoDeSobreposição {
 

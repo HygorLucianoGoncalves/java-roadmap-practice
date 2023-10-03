@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals.networkingSockets;
+package org.example.JavaAdvancedTopics.networkingSockets;
 
 import java.io.IOException;
 import java.io.PrintStream;

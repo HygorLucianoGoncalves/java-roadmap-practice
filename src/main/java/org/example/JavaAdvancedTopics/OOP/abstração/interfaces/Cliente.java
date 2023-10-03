@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals.OOP.abstração.interfaces;
+package org.example.JavaAdvancedTopics.OOP.abstração.interfaces;
 
 public class Cliente implements Auth{
     private String senha;

@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals;
+package org.example.JavaAdvancedTopics;
 
 
 public class ExGenerics<T> {// the type generics set much value in the declaration

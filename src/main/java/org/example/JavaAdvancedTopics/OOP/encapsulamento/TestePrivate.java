@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals.OOP.encapsulamento;
+package org.example.JavaAdvancedTopics.OOP.encapsulamento;
 
 public class TestePrivate {
     public static void main(String[] args) {
