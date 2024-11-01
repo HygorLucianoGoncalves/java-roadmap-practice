@@ -16,8 +16,9 @@ public class Conditionals {
             System.out.println("Maior de idade");
         }
 
-        // Use ?,: o operador para especificar uma condição de linha:
 
+
+        // Use ?,: o operador para especificar uma condição de linha:
         double salario = 1000;
         double bonus = salario * (salario > 1000 ? 0.10 : 0.15);
         System.out.println(bonus);
