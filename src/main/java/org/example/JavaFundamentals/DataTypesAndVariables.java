@@ -1,15 +1,12 @@
 package org.example.JavaFundamentals;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
 public class DataTypesAndVariables {
     public static void main(String[] args) {
 
-        //TIPOS PRIMITIVOS
+        /* TIPOS PRIMITIVOS */
 
         //TIPOS LÔGICOS
-        boolean verdadeiro = true;
+        boolean verdadeiro = true; // or false
 
         //LITERAIS
         char umChar = 'a';
@@ -21,10 +18,10 @@ public class DataTypesAndVariables {
         long oneLong = 2147483;
 
         //REAIS
-        float oneFloat = 3.6F;
+        float oneFloat = 3.6f;
         double oneDoble = 1.8;
 
-        //Não Primitivo - String, Arrays e Classes
+        //Não Primitivo - String, Arrays etc
 
         String nome = "Mario";
 

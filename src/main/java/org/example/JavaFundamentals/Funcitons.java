@@ -12,7 +12,10 @@ public class Funcitons {
 
         //Java Lambda Expressions
         numbers.forEach( (n) -> System.out.println(n));
-        //or os dois são a mesma coisa
+
+        //or
+
+        // os dois são a mesma coisa
         numbers.forEach(System.out::println);
 
 
