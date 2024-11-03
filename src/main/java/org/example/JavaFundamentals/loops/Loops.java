@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals;
+package org.example.JavaFundamentals.loops;
 
 public class Loops {
     public static void main(String[] args) {

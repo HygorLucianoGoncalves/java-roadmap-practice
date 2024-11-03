@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals;
+package org.example.JavaFundamentals.funcitions;
 
 import java.util.ArrayList;
 

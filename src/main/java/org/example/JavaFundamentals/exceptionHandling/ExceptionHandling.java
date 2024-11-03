@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals;
+package org.example.JavaFundamentals.exceptionHandling;
 
 public class ExceptionHandling {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package org.example.JavaFundamentals;
+package org.example.JavaFundamentals.dataTypesAndVariables;
 
 public class DataTypesAndVariables {
     public static void main(String[] args) {
