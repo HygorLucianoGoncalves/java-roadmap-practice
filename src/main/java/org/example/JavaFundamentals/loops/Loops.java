@@ -43,7 +43,17 @@ public class Loops {
             a++;
         }
 
+        //or
+
+        int testeTwo = 0;
+
+        while (++testeTwo <= 10) {
+            System.out.println(testeTwo);
+        }
+
+
         int teste12 = 20, teste10 = 30;
+
         do {
             System.out.println(teste12);
             teste12++;
