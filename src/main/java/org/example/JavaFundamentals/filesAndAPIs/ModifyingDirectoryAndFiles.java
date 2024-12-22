@@ -3,78 +3,77 @@ package org.example.JavaFundamentals.filesAndAPIs;
 import java.io.File;
 import java.io.IOException;
 
-public class ExempleFilesAndApis {
-
-    private String urldirectory;
-    private String urlfile;
-
-    //Contructor
-    public ExempleFilesAndApis(String urlfile, String urldirectory) {
-        this.urlfile = urlfile;
-        this.urldirectory = urldirectory;
-    }
+public class ModifyingDirectoryAndFiles {
 
     //Criando diretórios e arquivos
-    private String createDirectory(String urldirectory, String urlfile) {
-        File directory = new File(urldirectory + urlfile);
-        if (directory.exists()) {
-            return "Directory" + urldirectory + urlfile + "exists";
+    public void createDirectory(String urlDirectory, String nameDirectory) {
+        File directory = new File(urlDirectory + nameDirectory);
+        if (!directory.exists()) {
+            directory.mkdir();
+            System.out.println("Directory " + directory.getName() + " created");
         }
-        boolean statusDir = directory.mkdir();
-        return "Directory " + directory.getName() + " created";
     }
 
+    //Criando um arquivo
+    public void createFile(String urlDirectory, String nameFile) {
+        File fileTest = new File(urlDirectory, nameFile);
+        try {
+            fileTest.createNewFile();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Listando os Arquivos
+    public void listFileInDirectory(String urlDirectory) {
+        File ls = new File(urlDirectory);
+        for (File file : ls.listFiles()) {
+            System.out.println(file);
+        }
+    }
+
+    //Renomeando o arquivo
+    public void renamingTheFile(String urlDirectory, String nameFile, String newNameFile) {
+        File ls = new File(urlDirectory);
+        File arq = new File(ls, nameFile);
+        File arq2 = new File(ls, newNameFile);
+        boolean statusRename = arq.renameTo(arq2);
+        if (statusRename) {
+            System.out.println("Renaming: " + statusRename + " -> New name: " + arq);
+        }
+    }
+
+    //Deletando diretórios e arquivos
+    public void deleteDirectory(String urlDirectory) {
+        File directory = new File(urlDirectory);
+        boolean delete = directory.delete();
+        if (delete) {
+            System.out.println("Directory " + directory.getName() + " deleted");
+        }
+    }
+
+    //Delete Arquivos
+    public void deleteFile(String urlDirectory, String nameFile) {
+        File fileTest = new File(urlDirectory, nameFile);
+        boolean delete = fileTest.delete();
+        if (delete) {
+            System.out.println("File " + fileTest.getName() + " deleted");
+        }
+
+    }
+
+    //Verificando o tipo de arquivo
+    public void checkingTheFileType(String urlDirectory) {
+        File dir = new File(urlDirectory);
+        for (File f : dir.listFiles()) {
+            if (f.isDirectory()) {
+                System.out.println(f + " é um diretório.");
+            } else if (f.isFile()) {
+                System.out.println(f.getName() + " é um arquivo.");
+            }
+        }
+
+    }
 }
-//        //Criando um arquivo
-//        File fileTest = new File(directory, "criandoArquivo.txt");
-//        if (!fileTest.exists()) {
-//            try {
-//                boolean statusArq = fileTest.createNewFile();
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//
-//        //Listando os Arquivos
-//        File ls = new File(urldirectory + urlfile);
-//        for (File file : ls.listFiles()) {
-//            System.out.println(file);
-//        }
-//
-//        //Renomeando o arquivo
-//        File lsTwo = new File(urldirectory + urlfile);
-//        File arq = new File(lsTwo, "arq_02.txt");
-//        File arq2 = new File(lsTwo, "arq_03.txt");
-//        boolean statusRename = arq.renameTo(arq2);
-//        System.out.println("Renomedo: " + statusRename + " -> New name: " + arq);
-//
-//
-//        //Verificando o tipo de arquivo
-//        File dir = new File("C:\\TutorialArquivos");
-//
-//        File dir2 = new File(dir + "\\DiretorioDois");
-//        dir2.mkdirs();
-//
-//        File dir3 = new File(dir + "\\DiretorioTres");
-//        dir3.mkdir();
-//
-//        File arq3 = new File(dir, "arq_03.txt");
-//        try {
-//            arq3.createNewFile();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        for (File f : dir.listFiles()) {
-//            if (f.isDirectory()) {
-//                System.out.println(f + " é um diretório.");
-//            } else if (f.isFile()) {
-//                System.out.println(f.getName() + " é um arquivo.");
-//            }
-//
-//
-//        //Deletando dir and arq
-//        System.out.println(dir3.delete());
-//        System.out.println(dir2.delete());
 
 
