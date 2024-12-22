@@ -8,11 +8,11 @@ public class CrudWritingFile {
 
     ModifyingDirectoryAndFiles modifyingDirectoryAndFiles = new ModifyingDirectoryAndFiles();
 
-    public void write(String urlDirectory, String arq, User user) {
-        File ls = new File(urlDirectory);
-        File arqFile = new File(ls, arq);
-
-        modifyingDirectoryAndFiles.createFile(urlDirectory, arq);
+    public void write(String urlDirectoryAndNameFolder, String nameFile, User user) {
+        File ls = new File(urlDirectoryAndNameFolder);
+        modifyingDirectoryAndFiles.createDirectory("C:\\", "ArquivosTesteJava");
+        modifyingDirectoryAndFiles.createFile(urlDirectoryAndNameFolder, nameFile);
+        File arqFile = new File(ls, nameFile);
 
 
         try {
@@ -51,8 +51,9 @@ public class CrudWritingFile {
 
 
     }
-    public void read(String urlDirectory, String arq) {
-        File ls = new File(urlDirectory);
+
+    public void read(String urlDirectoryAndNameFolder, String arq) {
+        File ls = new File(urlDirectoryAndNameFolder);
         File arqFile = new File(ls, arq);
         try {
             //Indicamos o arquivo que será lido
@@ -69,7 +70,7 @@ public class CrudWritingFile {
             // enquanto ele seja diferente de null.
             //O método readLine() devolve a linha na
             // posicao do loop para a variavel linha.
-            while ( ( line = bufferedReader.readLine() ) != null) {
+            while ((line = bufferedReader.readLine()) != null) {
                 //Aqui imprimimos a linha
                 System.out.println(line);
             }
@@ -83,4 +84,5 @@ public class CrudWritingFile {
             throw new RuntimeException(e);
         }
     }
+
 }

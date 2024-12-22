@@ -9,10 +9,10 @@ public class Test {
         modifyingDirectoryAndFiles.createDirectory("C:\\","ArquivosTesteJava");
         modifyingDirectoryAndFiles.createFile("C:\\ArquivosTesteJava","nomeTesteONEpsipsi");
         modifyingDirectoryAndFiles.listFileInDirectory("C:\\ArquivosTesteJava");
-        modifyingDirectoryAndFiles.renamingTheFile(urlDirectory,"nomeTesteONEpsipsi","ArquivosTesteJavaNewName");
-        modifyingDirectoryAndFiles.deleteFile(urlDirectory,"ArquivosTesteJavaNewName");
-        modifyingDirectoryAndFiles.deleteDirectory(urlDirectory);
-        modifyingDirectoryAndFiles.checkingTheFileType("C:\\");
+//        modifyingDirectoryAndFiles.renamingTheFile(urlDirectory,"nomeTesteONEpsipsi","ArquivosTesteJavaNewName");
+//        modifyingDirectoryAndFiles.deleteFile(urlDirectory,"ArquivosTesteJavaNewName");
+//        modifyingDirectoryAndFiles.deleteDirectory(urlDirectory);
+//        modifyingDirectoryAndFiles.checkingTheFileType("C:\\");
 
 
 
