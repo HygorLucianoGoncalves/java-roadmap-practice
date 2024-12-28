@@ -7,7 +7,7 @@ public class StackInJava {
 
 
     public static void main(String[] args) {
-        Deque<Integer> stack = new ArrayDeque<Integer>();
+        Deque<Integer> stack = new ArrayDeque<>();
 
         stack.push(1);
         stack.push(2);
@@ -18,7 +18,8 @@ public class StackInJava {
         stack.push(stack.pop());
 
 
-        System.out.println("peek = "+stack.peek());
+        System.out.println("peek = "+ stack.peek());
+
         for (Integer i : stack) {
             System.out.println(i);
         }
