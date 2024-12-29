@@ -17,11 +17,12 @@ public class HashTableInjava {
         if (n != null) {
             System.out.println(n);
         }
-        System.out.println("----------------------------");
-        for (int a : numbers.keySet()) {
-            System.out.println(a + ": " + numbers.get(a));
+//        System.out.println("----------------------------");
+//        for (int a : numbers.keySet()) {
+//            System.out.println(a + ": " + numbers.get(a));
+//        }
+        numbers.forEach((k, v) -> System.out.println(k + ": " + v));
 
-        }
         System.out.println("----------------------------");
         System.out.println("size: " + numbers.size());
 
