@@ -15,6 +15,8 @@ public class ArrayListEx {
         listNames.removeFirst();//remove Vijay
         listNames.removeLast();//remove aloo
 
+
+        System.out.println(listNames);
         System.out.println("test .get: " + listNames.get(0));
 
         listNames.forEach(System.out::println);

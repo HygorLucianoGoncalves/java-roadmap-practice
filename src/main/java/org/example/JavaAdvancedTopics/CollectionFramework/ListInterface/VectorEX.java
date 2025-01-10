@@ -1,4 +1,4 @@
-package org.example.JavaAdvancedTopics.CollectionFramework.list_interface;
+package org.example.JavaAdvancedTopics.CollectionFramework.ListInterface;
 
 import java.util.Vector;
 

@@ -1,13 +1,7 @@
-package org.example.JavaAdvancedTopics.CollectionFramework.list_interface;
+package org.example.JavaAdvancedTopics.CollectionFramework.ListInterface;
 
 import java.util.LinkedList;
 
-/**
- * LinkedList implementa a interface de coleção.
- * Ele usa uma lista duplamente vinculada internamente para armazenar os elementos.
- * Ele pode armazenar os elementos duplicados. Mantém a ordem de inserção e não está sincronizado.
- * No LinkedList, a manipulação é rápida porque nenhuma mudança é necessária
- */
 public class LinkedListEX {
     public static void main(String args[]){
         LinkedList<String> al=new LinkedList<String>();
@@ -16,8 +10,8 @@ public class LinkedListEX {
         al.add("Ravi");
         al.add("Ajay");
 
-        for (String teste : al){
-            System.out.println(teste);
-        }
+        al.remove(2);
+        System.out.println(al);
+        al.forEach(System.out::println);
     }
 }
